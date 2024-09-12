@@ -1,0 +1,64 @@
+create setup.py
+install pipi or to convert project into package to make the folder into packages
+setup.py
+
+from setuptools import find_packages,setup
+from typing import LIST
+HYPHEN_E_DOT='-e .'
+def get_requirements(file_path:str)->LIST[str]:
+
+	requirements=[]
+	with open(file_path) as file_obj:
+		requirements=file_obj.readlines()
+		requirements=[req.replace("\n","") for req in requirements]
+		if HYPHEN_E_DOT in requirements:
+			requirements.remove(HYPHEN_E_DOT)
+	return requirements
+
+# -e . link the requirements to setup
+# to install setup.py  # python  setup.py install 
+
+setup(
+	name='RegressorProject',
+	version='0.0.1',
+	author='Sahim',
+	author_email='kazisahim121@gmail.com',
+	# install_requires=['numpy','pandas'],
+	install_requires=get_requirements('requirements.txt'),
+	packages=find_packages() # it will try to findout all the packages
+	
+	
+	
+	
+)
+
+
+requiremnts.txt
+numpy
+pandas
+matplotlib
+seaborn
+-e .
+create folder source
+notebooks
+src
+>pipeline
+ >__init__.py
+ >prediction_pipeline.py
+ >training_pipeline.py
+>components
+ >__init.py
+ >data_ingestion.py
+ >data_transformation.py
+ >model_trainer.py
+>__init__.py
+>logger.py
+>exception.py
+>util.py
+# use import package from different different file
+# use to import package from here or there # import and use the source file anywhere
+
+time stamp 1:06
+
+inside the src folder create components folder as well
+inside components folder create __init__.py

@@ -1,0 +1,23 @@
+Data Cleaning # Before EDA Also
+
+Data Ingestion
+Taking the data to include in my project life cycle
+Data Transformation
+
+Model Training 
+
+Model Evaluation --> How good is model is
+
+Deployement
+
+
+
+
+EDA
+
+Feature Engineering 
+--> Handle Outliers ,
+Model Training
+
+Model Deployment
+
