@@ -1,3 +1,4 @@
+# Step 3
 import os # to create file path --> in linux server path created only this module
 ## Assign path of both train and test files
 from src.logger import logging
@@ -59,8 +60,11 @@ class DataIngestion:
             logging.info("Exception at data ingestion stage")
             raise CustomException(e,sys)
 
-if __name__ == '__main__':
-    obj = DataIngestion()
-    train_data_path,test_data_path=obj.initiate_data_ingestion()
-    data_transformation = DataTransformation()
-    train_arr,test_arr,_=data_transformation.inititate_data_transformation(train_data_path,test_data_path)
+
+
+# Shift it to training_pipeline after created model_trainer
+# if __name__ == '__main__':
+#     obj = DataIngestion()
+#     train_data_path,test_data_path=obj.initiate_data_ingestion()
+#     data_transformation = DataTransformation()
+#     train_arr,test_arr,_=data_transformation.inititate_data_transformation(train_data_path,test_data_path)
