@@ -3,5 +3,6 @@ pandas
 seaborn
 matplotlib
 plotly
+flask
 scikit-learn
 -e .

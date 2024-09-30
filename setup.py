@@ -1,3 +1,4 @@
+# Step 0
 from setuptools import find_packages,setup
 from typing import List
 HYPHEN_E_DOT='-e .'
@@ -12,7 +13,6 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 
-
 setup(
     name='RegressorProject',
     version='0.0.1',
@@ -20,4 +20,5 @@ setup(
     author_email='qazisaim121@gmail.com',
     install_requires=get_requirements('requirements.txt'),
     packages=find_packages(),
+    
 )
